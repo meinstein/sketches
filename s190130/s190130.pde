@@ -2,7 +2,7 @@ import processing.svg.*;
 import java.util.Date;
 
 void settings() {
-  Date d = new Date(); 
+  Date d = new Date();
   String name = "../svg/" + d.getTime() / 1000 + ".svg";
   size(1000, 1000, SVG, name);
 }
@@ -15,6 +15,6 @@ void draw(){
       line(ri, j, i, rj);
     }
   }
-  
+
   exit();
 }
