@@ -3,7 +3,7 @@ import java.util.Date;
 
 void settings() {
   Date d = new Date();
-  String name = "../svg/" + d.getTime() / 1000 + ".svg";
+  String name = "./" + d.getTime() / 1000 + ".svg";
   size(1000, 1000, SVG, name);
 }
 
