@@ -5,8 +5,6 @@ void settings() {
   Date d = new Date();
   String svgName = "./" + d.getTime() / 1000 + ".svg";
   size(800, 800, SVG, svgName);
-  String pngName = "./" + d.getTime() / 1000 + ".svg";
-  save(pngName);
 }
 
 float adjust(float yVal) {
