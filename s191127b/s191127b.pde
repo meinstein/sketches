@@ -24,7 +24,8 @@ void draw() {
       for (int vi = 1; vi < i; vi = vi+1) {
         PVector v = vectors[vi];
         noFill();
-        stroke(0, 0.5);
+        strokeWeight(random(0,3));
+        stroke(random(0, 255));
         bezier(v.x, v.y, width/2, height/2, width/2, height/2, vector.x, vector.y);
       }
     }
