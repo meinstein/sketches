@@ -11,19 +11,21 @@ void settings() {
 }
 
 void draw() {
-  int rings = 55;
-  int ringw = 125;
+  int rings = 75;
+  int ringw = 200;
   for (int r = 0; r < rings; r = r+1) {
-    int steps = 300;
+    int steps = 50;
     float a = TWO_PI/steps;
     PVector[] vectors = new PVector[steps];
     for (int i = 0; i < steps; i = i+1) {
-      float x = width/2 + sin(a*i) * random(canx/ringw*r, canx/ringw*r*1.1);
-      float y = height/2 + cos(a*i) * random(cany/ringw*r, cany/ringw*r*1.1);
+      float x = width/2 + sin(a*i) * random(canx/ringw*r, canx/ringw*r*1.05);
+      float y = height/2 + cos(a*i) * random(cany/ringw*r, cany/ringw*r*1.05);
       PVector vector = new PVector(x, y);
       vectors[i] = vector;
-      stroke(random(0, 255));
-      strokeWeight(random(1, 7));
+      //stroke(random(0, 255));
+      stroke(0);
+      strokeWeight(1);
+      //strokeWeight(random(1, 5));
       // ensure there is a previous point to connect to
       if (i > 0) {
         PVector v = vectors[i-1];
